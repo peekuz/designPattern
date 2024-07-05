@@ -7,7 +7,16 @@ import java.util.List;
 import com.example.Interview.model.Customer;
 import com.example.Interview.model.Item;
 public class DMCC {
+     //Here we define type of line Item, name,quantity and amount for 1 quantity
+     private static List<Item> getLineItems() {
+        return Arrays.asList(
+                new Item("grocery", "rice",11,50),
+                new Item("fruit", "apple",2,30.0)
+        );   
+    
+    }
     public static void main(String[] args) {
+         //Here we define the customer details parameters are name, isEmployee,affiliatedToStore and customer created date
         Customer currentCustomer = new Customer("shafeeq",Boolean.TRUE,Boolean.TRUE,LocalDate.now());
         double percentageDiscountValue = getPercentageDiscount(currentCustomer);
         List<Item> lineItems = getLineItems();
@@ -18,13 +27,7 @@ public class DMCC {
         System.out.println("DiscountedSubtotal: "+ discountedTotal);
     }
 
-    private static List<Item> getLineItems() {
-        return Arrays.asList(
-                new Item("grocery", "rice",11,50),
-                new Item("fruit", "apple",2,30.0)
-        );   
-    
-    }
+   
 
     private static double getTotalPercentageDiscountAmount(double percentageDiscountValue,         List<Item> lineItems) {
         double totalDiscountAmount = 0;
@@ -45,7 +48,6 @@ public class DMCC {
 
     private static double getAmountDiscountValue(double amount) {
         Double count =  (amount / 100);
-
         double discountValue =((count.intValue()) * 5);
         return amount - discountValue;
     }
