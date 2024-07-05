@@ -20,7 +20,7 @@ public class DMCC {
 
     private static List<Item> getLineItems() {
         return Arrays.asList(
-                new Item("grocery", "rice",10,50),
+                new Item("grocery", "rice",11,50),
                 new Item("fruit", "apple",2,30.0)
         );   
     
