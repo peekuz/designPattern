@@ -13,7 +13,6 @@ public class DMCC {
                 new Item("grocery", "rice",11,50),
                 new Item("fruit", "apple",2,30.0)
         );   
-    
     }
     public static void main(String[] args) {
          //Here we define the customer details parameters are name, isEmployee,affiliatedToStore and customer created date
